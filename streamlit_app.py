@@ -51,14 +51,8 @@ streamlit.dataframe(my_data_rows)
 fruit_choice_2= streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('Thanks for adding ', fruit_choice_2)
 
-import requests
-fruityvice_response_2 = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice_2)
 
 
-# take the json version of the response and normalize it
-fruityvice_normalized_2 = pandas.json_normalize(fruityvice_response_2.json())
-# output it the screen as a table
-streamlit.dataframe(fruityvice_normalized_2)
 
 
 
